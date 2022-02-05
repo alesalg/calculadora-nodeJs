@@ -3,14 +3,6 @@ const inquirer = require('inquirer')
 
 inquirer.prompt([
     {
-        type: 'list',
-        name: 'calculo',
-        message: 'Qual operação deseja fazer ?',
-        choices: [
-            'Somar','Subtrair', 'Dividir','Multiplicar'
-        ]
-    },
-    {
         type: 'number',
         name: 'n1',
         message: 'Digite o primeiro valor: '
@@ -19,6 +11,14 @@ inquirer.prompt([
         type: 'number',
         name: 'n2',
         message: 'Digite o segundo valor: '
+    },
+    {
+        type: 'list',
+        name: 'calculo',
+        message: 'Qual operação deseja fazer ?',
+        choices: [
+            'Somar','Subtrair', 'Dividir','Multiplicar'
+        ]
     }
 ]).then((answers) => {
     let n1 = answers.n1 
